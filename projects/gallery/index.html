@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Gallery Portfolio — An edition of geometric prints exploring repetition, scale and negative space.">
+    <title>Gallery Portfolio | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#ffb86b">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Gallery Portfolio</b></nav>
+          <small>PROJECT 01 / Creative Design</small>
+          <h1>Gallery Portfolio</h1>
+          <p>An edition of geometric prints exploring repetition, scale and negative space.</p>
+          <ul class="chips"><li>Vector art</li><li>CSS Grid</li><li>Lightbox</li></ul>
+          <div class="tryit"><b>Try this</b><span>Filter to Curves, open Tidal rings, zoom, then use the arrow keys. Escape closes the lightbox.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/gallery.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">01</span>
+        </div>
+      </div>
+      <div class="filters" id="categories">
+        <button aria-pressed="true">All prints</button>
+        <button aria-pressed="false">Curves</button>
+        <button aria-pressed="false">Linear</button>
+      </div>
+      <div id="prints" class="prints"></div>
+      <dialog class="lightbox" id="light" aria-labelledby="printTitle">
+        <button class="close" aria-label="Close lightbox">×</button>
+        <div class="zoomarea">
+          <img id="edition" alt="">
+        </div>
+        <h2 id="printTitle"></h2>
+        <p id="design"></p>
+        <div class="actions">
+          <button id="prev">← Previous</button>
+          <button id="zoom">Zoom in</button>
+          <button id="next">Next →</button>
+        </div>
+      </dialog>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../gesture-classifier/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Hand Gesture Classifier AI</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../calculator/index.html"><span><small>Next</small>Simple Calculator</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+const {$,node,read,save}=Studio;
+let left,player,timer,sound=read('sound',false),score=read('score',{wins:0,losses:0}),audio;
+  function render(){const sticks=$('sticks');
+  sticks.replaceChildren();
+  for(let i=0;
+  i<7;
+  i++)sticks.append(node('i','',i<left?'':'gone'));
+  sticks.setAttribute('aria-label',left+' sticks remaining');
+  $('turn').textContent=left?(player?'Your move':'Computer’s move'):'Round complete';
+  $('take1').disabled=!player||left<1;
+  $('take2').disabled=!player||left<2;
+  $('score').textContent=score.wins+' wins · '+score.losses+' losses';
+  $('sound').textContent='Sound '+(sound?'on':'off');
+}
+  function beep(){if(!sound)return;
+    try{audio??=new AudioContext();
+    audio.resume().catch(()=>{});
+    let tone=audio.createOscillator(),gain=audio.createGain();
+    gain.gain.value=.04;
+    tone.connect(gain).connect(audio.destination);
+    tone.start();
+    tone.stop(audio.currentTime+.09);
+}catch{}}
+  function round(){clearTimeout(timer);
+  if($('over').open)$('over').close();
+  left=7;
+  player=$('first').value==='You';
+  $('comment').textContent=player?'Seven sticks remain. You go first.':'Seven sticks remain. The computer goes first.';
+  render();
+  if(!player)timer=setTimeout(()=>move(opponentMove(left,$('difficulty').value),false),700);
+}
+  function move(n,human){if(player!==human||n<1||n>Math.min(2,left))return;
+  left-=n;
+  beep();
+  $('comment').textContent=(human?'You took ':'Computer took ')+n+'. '+left+' remaining.';
+    if(!left){score[human?'wins':'losses']++;
+    save('score',score);
+    $('winner').textContent=human?'You won!':'Computer wins';
+    render();
+    $('finalScore').textContent=$('score').textContent;
+    $('over').showModal();
+    return;
+  }player=!human;
+  render();
+  if(!player)timer=setTimeout(()=>move(opponentMove(left,$('difficulty').value),false),550);
+}
+$('take1').onclick=()=>move(1,true);
+$('take2').onclick=()=>move(2,true);
+$('restart').onclick=$('again').onclick=round;
+  $('sound').onclick=()=>{sound=!sound;
+  save('sound',sound);
+  beep();
+  render();
+};
+$('difficulty').onchange=$('first').onchange=round;
+round();

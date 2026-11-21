@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Realtime Chat — Exchange messages across local tabs or connect a shared squad room.">
+    <title>Realtime Chat | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#c4b5fd">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Realtime Chat</b></nav>
+          <small>PROJECT 05 / Web Applications</small>
+          <h1>Realtime Chat</h1>
+          <p>Exchange messages across local tabs or connect a shared squad room.</p>
+          <ul class="chips"><li>BroadcastChannel</li><li>Supabase</li><li>Realtime</li></ul>
+          <div class="tryit"><b>Try this</b><span>Open Chat in two tabs with different display names, type in one and send.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/chat.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">05</span>
+        </div>
+      </div>
+      <div class="workspace">
+        <section data-reveal class="panel">
+          <small id="connection" role="status">Connecting…</small>
+          <h2>Squad room</h2>
+          <div id="messages" role="log" aria-label="Conversation"></div>
+          <p id="typing" class="hint" role="status"></p>
+          <form class="actions" id="composer">
+            <label class="grow">Message<input id="message" required maxlength="1500" autocomplete="off">
+            </label>
+            <button type="button" id="emoji" aria-label="Insert smile emoji">☺</button>
+            <button class="btn primary">Send</button>
+          </form>
+        </section>
+        <aside data-reveal class="panel form">
+          <h2>Your profile</h2>
+          <label>Display name<input id="alias" maxlength="32" placeholder="Your name">
+          </label>
+          <details>
+            <summary>Project handoff prompts</summary>
+            <div id="prompts"></div>
+          </details>
+          <p id="chatHelp"></p>
+          <p>Your last 100 messages are kept in this browser.</p>
+        </aside>
+      </div>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../game/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Seven-stick Strategy</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../image-classifier/index.html"><span><small>Next</small>Image Classifier AI</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script defer src="../../js/config.js"></script>
+    <script defer src="../../js/services/chat-config.js"></script>
+    <script defer src="../../js/services/chat.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Image Classifier AI — Drop in a photograph and explore the labels predicted by MobileNet.">
+    <title>Image Classifier AI | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#34d399">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Image Classifier AI</b></nav>
+          <small>PROJECT 06 / Artificial Intelligence</small>
+          <h1>Image Classifier AI</h1>
+          <p>Drop in a photograph and explore the labels predicted by MobileNet.</p>
+          <ul class="chips"><li>TensorFlow.js</li><li>MobileNet</li><li>ImageNet</li></ul>
+          <div class="tryit"><b>Try this</b><span>Drop a JPEG, PNG or WebP up to 10 MB, or use the studio illustration, then Classify.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/image.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">06</span>
+        </div>
+      </div>
+      <div class="workspace">
+        <section data-reveal class="panel form">
+          <label class="drop" id="drop">Choose or drop an image<input id="file" type="file" accept="image/jpeg,image/png,image/webp">
+            <small>JPEG, PNG or WebP · up to 10 MB</small>
+          </label>
+          <img id="photo" class="photopreview" alt="Selected image" hidden>
+          <div class="actions">
+            <button id="classify" disabled>Classify image</button>
+            <button id="reset">Reset</button>
+            <button id="testImage">Try a studio illustration</button>
+          </div>
+        </section>
+        <section data-reveal class="panel">
+          <small>MobileNet / ImageNet</small>
+          <h2>Predictions</h2>
+          <p id="status" role="status">Select a photo to get started.</p>
+          <div id="results"></div>
+          <details>
+            <summary>Offline sample mode</summary>
+            <p>Explore annotated examples. These labels describe the samples.</p>
+            <select aria-label="Sample image" id="sample">
+              <option>Pear</option>
+              <option>Bicycle</option>
+            </select>
+            <p id="sampleResult"></p>
+          </details>
+        </section>
+      </div>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../chat/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Realtime Chat</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../sentiment-analyzer/index.html"><span><small>Next</small>Sentiment Analyzer AI</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script defer src="../../js/models/image.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

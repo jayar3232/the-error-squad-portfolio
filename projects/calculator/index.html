@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Simple Calculator — A precision keypad with keyboard shortcuts and a running calculation history.">
+    <title>Simple Calculator | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#5eead4">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Simple Calculator</b></nav>
+          <small>PROJECT 02 / Web Applications</small>
+          <h1>Simple Calculator</h1>
+          <p>A precision keypad with keyboard shortcuts and a running calculation history.</p>
+          <ul class="chips"><li>JavaScript</li><li>LocalStorage</li><li>Keyboard</li></ul>
+          <div class="tryit"><b>Try this</b><span>Type 2.5+3*4 and press Enter for 14.5. Try dividing by zero, then edit with Backspace.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/calculator.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">02</span>
+        </div>
+      </div>
+      <div class="workspace">
+        <section data-reveal class="panel">
+          <small>Arithmetic workspace</small>
+          <output class="display" id="display" aria-live="polite">0</output>
+          <div class="keys" id="keys"></div>
+        </section>
+        <aside data-reveal class="panel">
+          <div class="sectionhead">
+            <h2>History</h2>
+            <button id="clearHistory">Clear history</button>
+          </div>
+          <ol id="history"></ol>
+          <p class="hint">Use the keypad or your keyboard. Enter calculates, Backspace deletes, and Escape clears.</p>
+        </aside>
+      </div>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../gallery/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Gallery Portfolio</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../weather/index.html"><span><small>Next</small>Weather Application</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script defer src="engine.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

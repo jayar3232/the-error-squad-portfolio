@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Weather Application — Search a city for its current conditions and a multi-day weather outlook.">
+    <title>Weather Application | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#60a5fa">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Weather Application</b></nav>
+          <small>PROJECT 03 / Web Applications</small>
+          <h1>Weather Application</h1>
+          <p>Search a city for its current conditions and a multi-day weather outlook.</p>
+          <ul class="chips"><li>Open-Meteo</li><li>Fetch API</li><li>Geocoding</li></ul>
+          <div class="tryit"><b>Try this</b><span>Search Cagwait, Cebu, Baguio or another city, then toggle °C / °F.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/weather.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">03</span>
+        </div>
+      </div>
+      <section data-reveal class="panel">
+        <form id="cityForm" class="actions">
+          <label>Find a city<input id="city" required value="Cagwait" maxlength="100">
+          </label>
+          <button class="btn primary">Get weather</button>
+          <button type="button" id="units">Show °F</button>
+        </form>
+        <p id="status" role="status"></p>
+        <div id="reading"></div>
+        <details>
+          <summary>Explore offline samples</summary>
+          <p>Illustrative readings from the original portfolio.</p>
+          <div id="samples" class="actions"></div>
+        </details>
+      </section>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../calculator/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Simple Calculator</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../game/index.html"><span><small>Next</small>Seven-stick Strategy</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script defer src="../../js/services/weather.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

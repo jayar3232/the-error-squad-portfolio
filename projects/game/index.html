@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080B16">
+    <meta name="description" content="Seven-stick Strategy — Take one or two sticks. Outsmart a computer opponent and claim the last move.">
+    <title>Seven-stick Strategy | THE ERROR SQUAD</title>
+    <link rel="icon" href="../../assets/icons/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header id="top">
+      <div class="nav">
+        <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+          <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+        </a>
+        <div class="actions">
+          <a class="btn back" href="../../index.html#projects"><span class="arrow" aria-hidden="true">←</span> All projects</a>
+          <button class="icon theme" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap app" id="main" style="--accent:#fb7185">
+      <div class="apphead" data-reveal>
+        <div class="apphead-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../../index.html#projects">Projects</a><span>/</span><b>Seven-stick Strategy</b></nav>
+          <small>PROJECT 04 / Games</small>
+          <h1>Seven-stick Strategy</h1>
+          <p>Take one or two sticks. Outsmart a computer opponent and claim the last move.</p>
+          <ul class="chips"><li>Game logic</li><li>Web Audio</li><li>Strategy AI</li></ul>
+          <div class="tryit"><b>Try this</b><span>Take one or two sticks each turn. Whoever takes the last stick wins. Let the computer start for a real challenge.</span></div>
+        </div>
+        <div class="apphead-art" data-parallax="-.05">
+          <img src="../../assets/art/game.svg" alt="" width="720" height="340">
+          <span class="num" aria-hidden="true">04</span>
+        </div>
+      </div>
+      <div class="workspace">
+        <section data-reveal class="panel">
+          <small>Match arena</small>
+          <h2 id="turn" aria-live="polite">Your move</h2>
+          <div id="sticks" aria-label="Remaining sticks"></div>
+          <p id="comment" role="status"></p>
+          <div class="actions">
+            <button id="take1">Take one</button>
+            <button id="take2">Take two</button>
+          </div>
+        </section>
+        <aside data-reveal class="panel form">
+          <h2>Match settings</h2>
+          <p>Seven sticks. Take one or two on your turn. Whoever takes the last stick wins.</p>
+          <label>Difficulty<select id="difficulty">
+              <option>Strategic</option>
+              <option>Casual</option>
+            </select>
+          </label>
+          <label>Who moves first<select id="first">
+              <option>You</option>
+              <option>Computer</option>
+            </select>
+          </label>
+          <p class="hint">Tip: with seven sticks, the player who moves first can always win by leaving a multiple of three. Let the computer start to face the real challenge.</p>
+          <div class="actions">
+            <button id="sound">Sound off</button>
+            <button id="restart">Restart</button>
+          </div>
+          <p id="score"></p>
+        </aside>
+      </div>
+      <dialog id="over" aria-labelledby="winner">
+        <h2 id="winner"></h2>
+        <p id="finalScore"></p>
+        <button class="btn primary" id="again">Play again</button>
+        <button class="close" aria-label="Close result">×</button>
+      </dialog>
+      <div class="next" data-reveal>
+        <a class="btn prev" href="../weather/index.html"><span class="arrow" aria-hidden="true">←</span><span><small>Previous</small>Weather Application</span></a>
+        <a class="btn ghost mid" href="../../index.html#projects">All projects</a>
+        <a class="btn primary nextbtn" href="../chat/index.html"><span><small>Next</small>Realtime Chat</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer>
+      <a class="brand" href="../../index.html" aria-label="THE ERROR SQUAD home">
+        <img src="../../assets/icons/mark.svg" width="35" height="35" alt="">THE ERROR <span>SQUAD</span>
+      </a>
+      <div>
+        <a href="../../index.html#projects">Projects</a> · <a href="../../index.html#contact">Contact</a> · <a href="#top">Back to top ↑</a>
+      </div>
+      <small>© THE ERROR SQUAD</small>
+    </footer>
+    <script defer src="engine.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
